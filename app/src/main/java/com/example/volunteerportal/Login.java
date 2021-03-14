@@ -29,23 +29,22 @@ public class Login extends AppCompatActivity {
     Button CallSignUp, login_btn;
     ImageView image;
     TextView logoText, sloganText;
-    TextInputLayout username,password;
+    TextInputLayout username, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
-
 
         //hooks
         CallSignUp = findViewById(R.id.SignUp_Screen);
-        image =findViewById(R.id.logo_image);
-        login_btn =findViewById(R.id.login_btn);
-        logoText =findViewById(R.id.logo_name);
-        sloganText =findViewById(R.id.slogan_name);
-        username =findViewById(R.id.username);
-        password =findViewById(R.id.password);
+        image = findViewById(R.id.logo_image);
+        login_btn = findViewById(R.id.login_btn);
+        logoText = findViewById(R.id.logo_name);
+        sloganText = findViewById(R.id.slogan_name);
+        username = findViewById(R.id.username);
+        password = findViewById(R.id.password);
 
 
         CallSignUp.setOnClickListener(new View.OnClickListener() {
@@ -67,6 +66,7 @@ public class Login extends AppCompatActivity {
                 startActivity(intent, options.toBundle());
             }
         });
+
 
     }
 }

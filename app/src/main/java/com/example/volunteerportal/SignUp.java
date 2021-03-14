@@ -40,9 +40,17 @@ public class SignUp extends AppCompatActivity {
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("users");
 
-                reference.setValue("Data stored");
+                String username = regUsername.getEditText().getText().toString();
+                String email = regEmail.getEditText().getText().toString();
+                String phoneNo = regPhoneNo.getEditText().getText().toString();
+                String password = regPassword.getEditText().getText().toString();
+                UserHelperClass helperClass = new UserHelperClass();
+                reference.setValue("data stored");
+
             }
         });
 
     }
-}
+
+
+    }
