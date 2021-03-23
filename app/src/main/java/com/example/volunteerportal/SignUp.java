@@ -40,7 +40,7 @@ public class SignUp extends AppCompatActivity {
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("users");
 
-                reference.setValue("First data");
+                //reference.setValue("First data");
 
                 // Get all the values
                 String username = regUsername.getEditText().getText().toString();
@@ -49,6 +49,7 @@ public class SignUp extends AppCompatActivity {
                 String password = regPassword.getEditText().getText().toString();
 
                 UserHelperClass helperClass = new UserHelperClass(username,email,phoneNo,password);
+
                 reference.child(phoneNo).setValue(helperClass);
 
             }
